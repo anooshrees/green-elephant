@@ -20,13 +20,16 @@ function HomeStackComponent() {
 }
 
 /* Transactions */
-import { TransactionsOverview } from '../Screens/Transactions';
+import { TransactionsOverview, SchedulePickup, Confirm, PickupScheduled } from '../Screens/Transactions';
 
 const TransactionsStack = createStackNavigator();
 function TransactionsStackComponent() {
     return (
         <TransactionsStack.Navigator headerMode="float">
-            <TransactionsStack.Screen name="TransactionsOverview" component={TransactionsOverview} />
+            <TransactionsStack.Screen name="Transactions" component={TransactionsOverview} />
+            <TransactionsStack.Screen name="Schedule Pickup" component={SchedulePickup} />
+            <TransactionsStack.Screen name="Confirm Pickup Time" component={Confirm} />
+            <TransactionsStack.Screen name="Pickup Scheduled" component={PickupScheduled} options={{ headerLeft: null, title: 'Transactions' }}/>
         </TransactionsStack.Navigator>
     );
 }
