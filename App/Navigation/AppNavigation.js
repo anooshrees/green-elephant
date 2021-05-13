@@ -1,4 +1,4 @@
-/* This file contains the app's navigation */
+/* This file contains the app's navigation!! */
 
 import React, { useEffect, useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
