@@ -20,7 +20,7 @@ function HomeStackComponent() {
 }
 
 /* Transactions */
-import { TransactionsOverview, SchedulePickup, Confirm, PickupScheduled } from '../Screens/Transactions';
+import { TransactionsOverview, SchedulePickup, Confirm, PickupScheduled, Messenger } from '../Screens/Transactions';
 
 const TransactionsStack = createStackNavigator();
 function TransactionsStackComponent() {
@@ -29,6 +29,7 @@ function TransactionsStackComponent() {
             <TransactionsStack.Screen name="Transactions" component={TransactionsOverview} />
             <TransactionsStack.Screen name="Schedule Pickup" component={SchedulePickup} />
             <TransactionsStack.Screen name="Confirm Pickup Time" component={Confirm} />
+            <TransactionsStack.Screen name="Messenger" component={Messenger} />
             <TransactionsStack.Screen name="Pickup Scheduled" component={PickupScheduled} options={{ headerLeft: null, title: 'Transactions' }}/>
         </TransactionsStack.Navigator>
     );
