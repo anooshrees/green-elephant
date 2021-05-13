@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 import { Metrics } from '../../Themes';
 
-export default function TransactionsOverview({ navigation }) {
+export default function PickupScheduled({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.transactionListing}>
@@ -41,11 +41,11 @@ export default function TransactionsOverview({ navigation }) {
                     <View style={styles.buttonContainer}>
                         <Text style={styles.text1}>iPhone Case</Text>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Schedule Pickup')}>
-                            <View style={[styles.button1, {backgroundColor: '#63D4F9'}]}>
-                                <Text style={styles.text2}>Schedule Pickup</Text>
-                            </View>
-                        </TouchableOpacity>
+                        
+                        <View style={styles.button3}>
+                            <Text style={styles.text2}>Pickup: Saturday, April 24th 7 PM @ Soto</Text>
+                        </View>
+                        
 
                         <View style={styles.button2}>
                             <Text style={styles.text2}>Chat</Text>
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     },
     text2: {
         fontSize: 15,
+        textAlign: 'center',
     },
     itemCard: {
         height: 156,
@@ -136,4 +137,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#F5F5F5',
     },
+    button3: {
+        height: 65,
+        width: 174,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#A4DAA3',
+    }
 })
