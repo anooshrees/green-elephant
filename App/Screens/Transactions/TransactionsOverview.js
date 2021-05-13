@@ -20,10 +20,11 @@ export default function TransactionsOverview({ navigation }) {
                         <View style={[styles.button1, {backgroundColor: '#FFDB83'}]}>
                             <Text style={styles.text2}>Pending...</Text>
                         </View>
-
-                        <View style={styles.button2}>
-                            <Text style={styles.text2}>Chat</Text>
-                        </View>
+                        <TouchableOpacity onPress={()=>navigation.navigate('Messenger')}>
+                            <View style={styles.button2}>
+                                <Text style={styles.text2}>Chat</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 
@@ -46,10 +47,11 @@ export default function TransactionsOverview({ navigation }) {
                                 <Text style={styles.text2}>Schedule Pickup</Text>
                             </View>
                         </TouchableOpacity>
-
-                        <View style={styles.button2}>
-                            <Text style={styles.text2}>Chat</Text>
-                        </View>
+                        <TouchableOpacity onPress={()=>navigation.navigate('Messenger')}>
+                            <View style={styles.button2}>
+                                <Text style={styles.text2}>Chat</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -69,9 +71,11 @@ export default function TransactionsOverview({ navigation }) {
                             <Text style={styles.text2}>Transaction Completed</Text>
                         </View>
 
-                        <View style={styles.button2}>
-                            <Text style={styles.text2}>Chat</Text>
-                        </View>
+                        <TouchableOpacity onPress={()=>navigation.navigate('Messenger')}>
+                            <View style={styles.button2}>
+                                <Text style={styles.text2}>Chat</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
