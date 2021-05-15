@@ -36,13 +36,16 @@ function TransactionsStackComponent() {
 }
 
 /* Closet */
-import { ClosetOverview } from '../Screens/Closet';
+import { ClosetOverview, ItemView, AddItem, ConfirmCredits} from '../Screens/Closet';
 
 const ClosetStack = createStackNavigator();
 function ClosetStackComponent() {
     return (
         <ClosetStack.Navigator headerMode="float">
-            <ClosetStack.Screen name="ClosetOverview" component={ClosetOverview} />
+            <ClosetStack.Screen name="My Closet" component={ClosetOverview} />
+            <ClosetStack.Screen name="Item View" component={ItemView} />
+            <ClosetStack.Screen name="Add Item" component={AddItem} />
+              <ClosetStack.Screen name="Confirm Credits" component={ConfirmCredits} />
         </ClosetStack.Navigator>
     );
 }
@@ -68,14 +71,14 @@ function TabNavComponent() {
             return <Ionicons style={{ marginTop: 3 }} name={iconName} size={35} color='#4d4d4d' />;
                 },
             })}
-            
+
         tabBarOptions={{
             activeTintColor: 'black',
             inactiveTintColor: '#4d4d4d'
         }}>
-            <TabNav.Screen name="Home" component={HomeStackComponent} />   
-            <TabNav.Screen name="Transactions" component={TransactionsStackComponent} /> 
-            <TabNav.Screen name="Closet" component={ClosetStackComponent} /> 
+            <TabNav.Screen name="Home" component={HomeStackComponent} />
+            <TabNav.Screen name="Transactions" component={TransactionsStackComponent} />
+            <TabNav.Screen name="My Closet" component={ClosetStackComponent} />
         </TabNav.Navigator>
     );
 }
